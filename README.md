@@ -9,7 +9,6 @@ It uses:
 * Logstash for analysing and breaking down logs.
 * Filebeat for pushing all app logs to logstash.
 * Metricbeat for pushing node analytics to elasticsearch.
-* Curator for regularly deleting old logs.
 
 Elasticsearch is installed as a StatefulSet so that there is some
 awareness betwee them.
@@ -21,8 +20,6 @@ from some nodes.
 
 ## Installation
 
-Firstly update the [kibana-deployment.yaml]() file so that the ingress
-route matches one that points at your cluster.
 
 To install this on a cluster apply all the files.
 
