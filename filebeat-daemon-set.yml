@@ -66,6 +66,12 @@ metadata:
     k8s-app: filebeat
 data:
   kubernetes.yml: |-
+    - type: log
+      enabled: true
+      paths:
+        - /var/log/containers
+        - /var/log/messages
+        - /var/log/syslog
     - type: docker
       containers.ids:
       - "*"
